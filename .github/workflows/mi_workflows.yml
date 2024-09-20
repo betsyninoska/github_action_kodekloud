@@ -8,11 +8,17 @@ jobs:
         steps:
         - name: checkout
           uses: actions/checkout@v4
-        - name: Mensaje de Bienvenida
-          run: echo "Mi github Action Job"
+        
+        - name: List and Read file
+          run: |
+           echo "Mi github Action Job"
+           ls - ltra
+           cat README.md
+        - name: Generate ASCCi 
+          run:  cowsay -f dragon "Run for cover, I am a Dragon ... EaWs" > dragon.txt
 
-        - name: List file
-          run: ls
+       # - name: List file
+       #   run: ls
 
-        - name: Read file
-          run: cat REARME.md
+       # - name: Read file
+       #   run: cat REARME.md
