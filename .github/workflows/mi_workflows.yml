@@ -6,6 +6,8 @@ jobs:
     primer_job:
         runs-on: ubuntu-latest
         steps:
+        - name: checkout
+          uses: actions/checkout@v4
         - name: Mensaje de Bienvenida
           run: echo "Mi github Action Job"
 
