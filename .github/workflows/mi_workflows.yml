@@ -14,9 +14,9 @@ jobs:
            echo "Mi github Action Job"
            ls - ltra
            cat README.md
-           
-        - name: Generate ASCII 
-          run:  cowsay -f dragon "Run for cover, I am a Dragon ... EaWs" > dragon.txt
+
+        - name: Generate ASCII  Artwork
+          run:  cowsay -f dragon "Run for cover, I am a Dragon ... RAWR" >> dragon.txt
 
        # - name: List file
        #   run: ls
