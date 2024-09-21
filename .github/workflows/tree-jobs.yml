@@ -1,0 +1,34 @@
+name: Generate tree Jobs
+
+on: push
+
+jobs:
+    build_job_1:
+        runs-on: ubuntu-latest
+        steps:
+        - name: install Cowsay Program
+          uses: sudo apt-get install cowsay -y
+        
+        - name: Execute Cowsay CMD
+          run:  cowsay -f dragon "Run for cover, I am a Dragon ... RAWR" >> dragon.txt
+
+        - name: Sleep for 30 seconds
+          run: sleep 30
+    build_job_2:
+        runs-on: ubuntu-latest
+        steps:
+        - name: sleep for 10 second
+          uses: sudo apt-get install cowsay -y
+        
+        - name: Test File Exists
+          run: grep -i "dragon" dragon.txt
+
+    build_job_3:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Read File
+          run: cat dragon.txt
+
+        - name: Deploy
+          run: echo Deploying ...
+          
